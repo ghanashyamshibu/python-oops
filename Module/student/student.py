@@ -7,6 +7,7 @@ class studentclass:
         self.gender = gender
         self.mobile_number = mobile_number
         self.email_address = email_address
+        self.password = password
         self.preferred_language = preferred_language
         self.school_college_name = school_college_name
         self.class_grade = class_grade
@@ -22,3 +23,8 @@ class studentclass:
         self.parent_email_address = parent_email_address
         self.preferred_communication_method = preferred_communication_method
 
+
+
+def register_student(self, email_address, password):
+   self.email_address = email_address
+   self.password = password
