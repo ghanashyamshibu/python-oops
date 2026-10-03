@@ -59,3 +59,34 @@ class studentclass:
         self.school_college_name = school_college_name
         self.class_grade = class_grade
         self.academic_year = academic_year 
+
+    def savetoDb(self):
+        import sqlite3
+        conn = sqlite3.connect("tution.db")
+        cursor = conn.cursor()
+        cursor.execute("""
+            INSERT INTO Student (
+             full_name,
+             date_of_birth,
+             Age,
+             mobile_number,
+             preferred_language,
+             school_collage_name,
+             class_grade,
+             academic_year)
+             VALUES(?,?,?,?,?,?,?,?)""",
+            (
+                self.full_name,
+                self.date_of_birth,
+                self.age,
+                self.mobile_number,
+                self.preferred_language,
+                self.school_college_name,
+                self.class_grade,
+                self.academic_year
+               
+            ))
+
+        #save the changes and close the connection
+        conn.commit()
+        conn.close()

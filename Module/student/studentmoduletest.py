@@ -36,3 +36,4 @@ s1.setPrimaryInformation(
     class_grade=class_grade,
     academic_year=academic_year
 )
+s1.savetoDb()
