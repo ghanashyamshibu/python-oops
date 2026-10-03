@@ -29,19 +29,7 @@ cursor.execute("""
         academic_year text
     )
 """)
-
-cursor.execute("""
-INSERT INTO Student VALUES (
-    29,
-    'Ghanashyam',
-    'ghanashyamshibu6878@gamil.com',
-    '14-08-2007',
-    19,
-    8097532345,
-    'English',
-    'Ilahia Collage Of Arts and Science',
-    'A',
-    '2nd year')""") 
+                                                                                   
 # Save changes
 conn.commit()
  
